@@ -1,0 +1,3 @@
+outbound and ip.DstAddr == 193.110.128.199 opId=B6IgRzsDsV08nZiLsMuf	# marca.com
+outbound and ip.DstAddr == 159.25.16.198 opId=B6IgRzsDsV08nZiLsMuf		# meneame.com
+outbound and ip.DstAddr == 54.228.225.201 opId=B6IgRzsDsV08nZiLsMuf		##~meneame.net
