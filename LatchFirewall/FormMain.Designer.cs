@@ -190,10 +190,10 @@
             // txtActionLog
             // 
             this.txtActionLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtActionLog.Enabled = false;
             this.txtActionLog.Location = new System.Drawing.Point(0, 0);
             this.txtActionLog.Multiline = true;
             this.txtActionLog.Name = "txtActionLog";
+            this.txtActionLog.ReadOnly = true;
             this.txtActionLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtActionLog.Size = new System.Drawing.Size(663, 125);
             this.txtActionLog.TabIndex = 0;
