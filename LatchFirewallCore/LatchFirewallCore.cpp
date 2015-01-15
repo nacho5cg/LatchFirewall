@@ -78,9 +78,9 @@ int __cdecl main(int argc, char **argv)
 	System::String^ path = Path::Combine(System::Environment::CurrentDirectory, CONFIG_FILENAME);
 	System::Console::WriteLine(path);
 
-#if (_DEBUG)
-	while (!System::Diagnostics::Debugger::IsAttached) Sleep(1000);
-#endif
+//#if (_DEBUG)
+//	while (!System::Diagnostics::Debugger::IsAttached) Sleep(1000);
+//#endif
 
 	Configuration^ conf = Configuration::GetConfig();
 
@@ -166,7 +166,7 @@ static DWORD Filter(string args[])
 			System::Nullable<bool>^ status;
 			if (!System::String::IsNullOrEmpty(opId)) status = LatchHandler::CheckOperationStatus(opId, Configuration::GetConfig()->Timeout);
 
-			if (!status->HasValue || status->HasValue && status->Value)
+			if (!status->HasValue || (status->HasValue && status->Value) || System::String::IsNullOrEmpty(opId))
 			{
 				// Re-inject the matching packet.
 				if (!WinDivertSend(handle, packet, packet_len, &addr, NULL))
